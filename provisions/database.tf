@@ -5,7 +5,7 @@ resource "heroku_addon" "database_staging" {
 }
 
 resource "heroku_addon" "database_development" {
-  app  = "${heroku_app.staging.name}"
+  app  = "${heroku_app.development.name}"
   plan = "heroku-postgresql:hobby-dev"
 }
 
